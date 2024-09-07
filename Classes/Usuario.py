@@ -1,13 +1,14 @@
 class User:
-    def __init__(self, nome, id, limite = 0):
+    def __init__(self, nome, id):
         self.nome = nome
         self.id = id
         self.livros_reservados = []
+        self.limite = 0
     def reservar_livro(self, livro):
 
         if len(self.livros_reservados) <= 3:
             self.livros_reservados.append(livro)
-            print(f"{self.nome} reservou o  livro {livro.titulo}")
+            print(f"{self.nome.title()} reservou o  livro {livro.titulo}")
             self.limite += 1
         else:
             print("Excedeu o limite de reservas")
