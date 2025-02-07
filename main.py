@@ -1,5 +1,6 @@
-from Usuario import *
-from Livro import *
+from modules.Usuario import *
+from modules.Livro import *
+
 # Criação de livros
 livro1 = Livro("1984", "George Orwell", 5)
 livro2 = Livro("Brave New World", "Aldous Huxley", 2)

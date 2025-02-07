@@ -8,7 +8,7 @@ class User:
 
         if len(self.livros_reservados) <= 3:
             self.livros_reservados.append(livro)
-            print(f"{self.nome.title()} reservou o  livro {livro.titulo}")
+            print(f"{self.nome.title()} reservou o  livro {livro}")
             self.limite += 1
         else:
             print("Excedeu o limite de reservas")
@@ -20,5 +20,9 @@ class User:
 
     def listar_reservas(self):
         return self.livros_reservados
+
+    def informacao(self):
+       for livro in self.livros_reservados:
+           print(livro.autor)
 
 
